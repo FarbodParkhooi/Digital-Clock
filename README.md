@@ -1,5 +1,5 @@
 # Digital-Clock
-Test github /\\//\/\/\/\ Create digital clock
+Test github //\\//\\//\\//\\ Create digital clock
 
 
 با سلام
