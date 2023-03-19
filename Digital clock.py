@@ -9,7 +9,10 @@ def digital_clock():
 digital_clock()
 def Timer():
     TimerWindow = Toplevel()
-    None
+    # TimerWindow Options
+    TimerWindow.geometry('390x200')
+    TimerWindow.resizable(False,False)
+    TimerWindow.mainloop()
 # Create valu
 DigitalClockWindow = Tk()
 text_font= ("Boulder", 50, 'bold')
