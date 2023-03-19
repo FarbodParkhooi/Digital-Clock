@@ -17,9 +17,11 @@ foreground= "white"
 border_width = 65
 label = Label(DigitalClockWindow, font=text_font, bg=background, fg=foreground, bd=border_width) 
 label.grid(row=0, column=1)
+Button(DigitalClockWindow, text='Timer', command=Timer, bg='black', fg='white', borderwidth=3).grid(row=1, column=1)
 # Window ability(s)
 digital_clock()
 DigitalClockWindow.title("Digital Clock")
-DigitalClockWindow.geometry("390x200") 
+DigitalClockWindow.geometry("390x240") 
 DigitalClockWindow.resizable(False,False)
+DigitalClockWindow.config(bg='black')
 DigitalClockWindow.mainloop()
