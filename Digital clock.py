@@ -20,7 +20,7 @@ label = Label(DigitalClockWindow, font=text_font, bg=background, fg=foreground, 
 label.grid(row=0, column=1)
 Button(DigitalClockWindow, text='Timer', command=Timer)
 # Window ability(s)
-DigitalClockWindow.title("Digital Clock") 
+DigitalClockWindow.title("DC") # DC : Digital Clock 
 DigitalClockWindow.geometry("390x200") 
 DigitalClockWindow.resizable(False,False)
 DigitalClockWindow.mainloop()
