@@ -8,7 +8,11 @@ def digital_clock():
     label.after(200, digital_clock)
 def Timer():
     TimerWindow = Toplevel()
+    def StartTimer():
+        None
     Time = Entry(TimerWindow, width=50, borderwidth=5)
+    StartButton = Button(TimerWindow, text='Start', command=StartTimer)
+    StartButton.pack()
     Time.pack()
     TimerWindow.resizable(False,False)
     TimerWindow.mainloop()
