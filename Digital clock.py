@@ -8,7 +8,7 @@ def digital_clock():
     label.after(200, digital_clock)
 digital_clock()
 def Timer():
-    pass
+    None
 # Create valu
 DigitalClockWindow = Tk()
 text_font= ("Boulder", 50, 'bold')
