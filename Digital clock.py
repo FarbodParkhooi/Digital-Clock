@@ -8,6 +8,7 @@ def digital_clock():
     label.after(200, digital_clock)
 digital_clock()
 def Timer():
+    TimerWindow = Toplevel()
     None
 # Create valu
 DigitalClockWindow = Tk()
