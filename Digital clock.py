@@ -8,10 +8,7 @@ def digital_clock():
     label.after(200, digital_clock)
 def Timer():
     TimerWindow = Toplevel()
-    # TimerWindow Options
-    TimerWindow.geometry('390x200')
-    TimerWindow.resizable(False,False)
-    TimerWindow.mainloop()
+    None
 # Create valu
 DigitalClockWindow = Tk()
 text_font= ("Boulder", 50, 'bold')
@@ -22,7 +19,7 @@ label = Label(DigitalClockWindow, font=text_font, bg=background, fg=foreground, 
 label.grid(row=0, column=1)
 # Window ability(s)
 digital_clock()
-DigitalClockWindow.title("Digital Clock || Farbod")
+DigitalClockWindow.title("Digital Clock")
 DigitalClockWindow.geometry("390x200") 
 DigitalClockWindow.resizable(False,False)
 DigitalClockWindow.mainloop()
