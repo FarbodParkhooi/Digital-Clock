@@ -8,9 +8,16 @@ def digital_clock():
     label.after(200, digital_clock)
 def Timer():
     TimerWindow = Toplevel()
-    def StartTimer():
-        None
     Time = Entry(TimerWindow, width=50, borderwidth=5)
+    def StartTimer():
+        TimeG = Time.get()
+        TimerWindow.destroy()
+        StartWindow = Toplevel()
+        Label(StartWindow, text=TimeG, bg='black', fg='white', font=('Time', 20)).pack()
+        StartWindow.geometry('390x240')
+        StartWindow.config(bg='black')
+        StartWindow.resizable(False,False)
+        StartWindow.mainloop()
     StartButton = Button(TimerWindow, text='Start', command=StartTimer)
     StartButton.pack()
     Time.pack()
