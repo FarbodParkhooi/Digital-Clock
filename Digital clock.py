@@ -1,5 +1,6 @@
 # import library(s)
 from tkinter import *
+from time import sleep as sp
 import time
 # Create def
 def digital_clock(): 
