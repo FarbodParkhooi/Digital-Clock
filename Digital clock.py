@@ -21,7 +21,7 @@ def Timer():
         while iTimeG >= 0:
             iTimeG -= 1
             Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20)).place(relx=0.40, rely=0.40)
-            firstLabel.after(200, StartTimer)
+            sp(1)
     StartButton = Button(TimerWindow, text='Start', command=StartTimer, bg='black', fg='white')
     StartButton.pack()
     Time.pack()
