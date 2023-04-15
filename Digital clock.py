@@ -13,14 +13,12 @@ def Timer():
     def StartTimer():
         TimeG = Time.get()
         iTimeG = int(TimeG)
-        # Time.destroy()
-        # StartButton.destroy()
         firstLabel = Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20))
         firstLabel.place(relx=0.40, rely=0.40)
-        #.place(relx=0.40, rely=0.40)
         while iTimeG >= 0:
             iTimeG -= 1
             Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20)).place(relx=0.40, rely=0.40)
+            DigitalClockWindow.update_idletasks()
             sp(1)
     StartButton = Button(TimerWindow, text='Start', command=StartTimer, bg='black', fg='white')
     StartButton.pack()
