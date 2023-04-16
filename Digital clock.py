@@ -2,6 +2,7 @@
 from tkinter import *
 from time import sleep as sp
 import time
+import pyttsx3
 # Create def
 def digital_clock(): 
     time_live = time.strftime("%H:%M:%S")
@@ -15,12 +16,22 @@ def Timer():
         iTimeG = int(TimeG)
         firstLabel = Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20))
         firstLabel.place(relx=0.40, rely=0.40)
-        while iTimeG >= 0:
+        DigitalClockWindow.update_idletasks()
+        sp(1)
+        while iTimeG != 0:
+            firstLabel.destroy()
             iTimeG -= 1
-            Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20)).place(relx=0.40, rely=0.40)
+            iTimeGL = Label(TimerWindow, text=iTimeG, bg='black', fg='white', font=('', 20))
+            iTimeGL.place(relx=0.40, rely=0.40)
             DigitalClockWindow.update_idletasks()
-            sp(1)
-    StartButton = Button(TimerWindow, text='Start', command=StartTimer, bg='black', fg='white')
+            sp(0.5)
+            BlackL = Label(TimerWindow, text='', bg='black', padx=150, pady=150)
+            BlackL.place(relx=0.40, rely=0.40)
+            sp(0.5)
+            iTimeGL.destroy()
+        engine.say(text)
+        engine.runAndWait()
+    StartButton = Button(TimerWindow, text='Start', command=StartTimer, bg='black', fg='white', padx=140)
     StartButton.pack()
     Time.pack()
     TimerWindow.title('Timer')
@@ -28,7 +39,10 @@ def Timer():
     TimerWindow.config(bg='black')
     TimerWindow.resizable(False,False)
     TimerWindow.mainloop()
-# Create valu
+# Create value
+text = ".. Time Up! ."
+engine = pyttsx3.init()
+engine.setProperty('rate', 110)
 DigitalClockWindow = Tk()
 text_font= ("Boulder", 50, 'bold')
 background = "black"
